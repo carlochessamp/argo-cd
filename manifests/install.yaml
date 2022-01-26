@@ -3014,6 +3014,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-dex-server
     spec:
+      securityContext:
+        fsGroup: 65534
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
@@ -3316,6 +3318,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-server
     spec:
+      securityContext:
+        fsGroup: 65534
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
@@ -3560,6 +3564,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-application-controller
     spec:
+      securityContext:
+        fsGroup: 65534
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
